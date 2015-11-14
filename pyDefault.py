@@ -4,7 +4,7 @@
 
 import sys, getopt, os
 
-from functions import onError, usage
+from modules import onError, usage
 
 try:
     myopts, args = getopt.getopt(sys.argv[1:],

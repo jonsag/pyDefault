@@ -7,6 +7,10 @@ import ConfigParser, os, sys
 config = ConfigParser.ConfigParser()  # define config file
 config.read("%s/config.ini" % os.path.dirname(os.path.realpath(__file__)))  # read config file
 
+# read variables from config file
+var = config.get('header', 'var').strip()
+
+# handle errors
 def onError(errorCode, extra):
     print "\nError:"
     if errorCode == 1:
@@ -16,6 +20,7 @@ def onError(errorCode, extra):
         print "No options given"
         usage(errorCode)
         
+# print usage information        
 def usage(exitCode):
     print "\nUsage:"
     print "----------------------------------------"

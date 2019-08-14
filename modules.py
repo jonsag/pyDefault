@@ -13,12 +13,18 @@ var = config.get('header', 'var').strip()
 # handle errors
 def onError(errorCode, extra):
     print("\nError:")
-    if errorCode == 1:
+    if errorCode == 1: # print error information, print usage and exit
         print(extra)
         usage(errorCode)
-    elif errorCode == 2:
+    elif errorCode == 2: # no argument given to option, print usage and exit
         print("No options given")
         usage(errorCode)
+    elif errorCode == 3: # print error information and exit
+        print(extra)
+        sys.exit(errorCode)
+    elif errorCode == 4: # print error information and return running program
+        print(extra)
+        return
         
 # print usage information        
 def usage(exitCode):

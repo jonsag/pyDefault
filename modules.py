@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 # Encoding: UTF-8
 
@@ -13,11 +13,8 @@ var = config.get('header', 'var').strip()
 # handle errors
 def onError(errorCode, extra):
     print("\nError:")
-    if errorCode == 1: # print error information, print usage and exit
+    if errorCode in(1, 2): # print error information, print usage and exit
         print(extra)
-        usage(errorCode)
-    elif errorCode == 2: # no argument given to option, print usage and exit
-        print("No options given")
         usage(errorCode)
     elif errorCode == 3: # print error information and exit
         print(extra)

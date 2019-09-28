@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 # Encoding: UTF-8
 
@@ -19,7 +19,7 @@ except getopt.GetoptError as e:
 
 # if no options passed, then exit
 if len(sys.argv) == 1:  # no options passed
-    onError(2, 2)
+    onError(2, "No options given")
     
 verbose = False
     

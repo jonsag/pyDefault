@@ -28,5 +28,14 @@ def usage(exitCode):
     print("\nUsage:")
     print("----------------------------------------")
     print("%s " % sys.argv[0])
+    
+    print("\n%s -v" % sys.argv[0])
+    print("    Verbose output")
+    
+    print("\n%s -h" % sys.argv[0])
+    print("    Show help"
 
     sys.exit(exitCode)
+    
+    
+    

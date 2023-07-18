@@ -29,4 +29,3 @@ for option, argument in myopts:
         verbose = True
     elif option in ('-h', '--help'):  # display help text
         usage(0)
-        
